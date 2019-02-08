@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="home">
+        <!-- header -->
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="main-nav">
+                <div class="container">
+
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">xmas</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="~/images/logo.png" alt="" />x mas
+                            </a>
+
+                        </h1>
+                        <!-- <a class="navbar-brand" href="index.html">
+                            <img src="images/logo1.png" alt="" /></a>-->
+
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse nav-right">
+                        <ul class="nav navbar-nav navbar-right cl-effect-15">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about w3_agile-section -->
+                            <li class="hidden">
+                                <a class="page-scroll" href="#page-top"></a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#about">Idées cadeaux</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#prices">Liste des invités</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#event">Tirage au sort</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#team">Organisateurs</a>
+                            </li>
+                            @*<li>
+                                <a class="page-scroll" href=""><i class="fa fa-lock" aria-hidden="true"></i>Mon Compte</a>
+                            </li>*@
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /.container -->
+            </div>
+        </nav>
+        <!-- banner -->
+        <!-- //header -->
+
+
+        <!------------------- //géré par render body début ------------------------->
+        
+        <!-- //events pricing -->
+        <!-- event schedule -->
+
+         @RenderBody()
+        <!------------------- //géré par render body fin ------------------------->
+
+    </div>
+
+    <!-- //event schedule -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <p>© 2018 Xmas. All rights reserved | Design by<a href="http://w3layouts.com/">W3layouts</a></p>
+        </div>
+    </div>
+
+
+    <!-- js -->
+    @Scripts.Render("~/bundles/jquery")
+    <!-- //js -->
+    <!-- Scrolling Nav JavaScript -->
+    @*<script src="Scripts/js/scrolling-nav.js"></script>*@
+    <!-- //fixed-scroll-nav-js -->
+    @*<script src="Scripts/js/jquery.vide.min.js"></script>*@
+    @*les deux scripts au dessus qui s'occupent du scrolling remplacés par la ligne suivante: *@
+    @Scripts.Render("~/bundles/scrolling")
+
+
+    <!-- //gallery -->
+    @*<script src="Scripts/js/jquery.tools.min.js"></script>
+    <script src="Scripts/js/jquery.mobile.custom.min.js"></script>
+    <script src="Scripts/js/jquery.cm-overlay.js"></script>*@
+    @*les trois scripts au dessus qui s'occupent de la gallery remplacés par la ligne suivante: *@
+    @Scripts.Render("~/bundles/gallery")
+
+    <script>
+        $(document).ready(function () {
+            $('.cm-overlay').cmOverlay();
+        });
+    </script>
+    <!-- //gallery -->
+    <!-- Counter required files -->
+    @*<script src="Scripts/js/dscountdown.min.js"></script>*@
+    @*le script au dessus qui s'occupent du countdown remplacés par la ligne suivante: *@
+    @Scripts.Render("~/bundles/countdown")
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.demo2').dsCountDown({
+                endDate: new Date("december 24, 2019 23:59:00"),
+                theme: 'black'
+            });
+        });
+    </script>
+    <!-- //Counter required files -->
+    <!--start-date-piker-->
+    @*<link rel="stylesheet" href="css/jquery-ui.css" //je commente ce lien css car il est dans le bundle css global, donc si pas d'interférence (rien à supplanter), ne le met pas />*@ 
+    @*<script src="Scripts/js/jquery-ui.js"></script>*@
+    @*le script au dessus qui s'occupent du jquery-ui remplacés par la ligne suivante: *@
+    @Scripts.Render("~/bundles/jquery_ui")
+    <script>
+        $(function () {
+            $("#datepicker,#datepicker1").datepicker();
+        });
+    </script>
+    <!-- //End-date-piker -->
+    <!-- start-smooth-scrolling -->
+    @*<script src="Scripts/js/move-top.js"></script>
+    <script src="Scripts/js/easing.js"></script>*@
+    @*les deuxscripts au dessus qui s'occupent du smooth scrolling remplacés par la ligne suivante: *@
+    @Scripts.Render("~/bundles/smooth_scrolling")
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+            	containerID: 'toTop', // fading element id
+            	containerHoverID: 'toTopHover', // fading element hover id
+            	scrollSpeed: 1200,
+            	easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="Scripts/js/SmoothScroll.min.js"></script> @*//je l'ai inclus dans le bundle précédant, en espérant que ça posera pas de problème (vu sa place séparée)*@
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    @*<script src="Scripts/js/bootstrap.js"></script>*@
+    @*remplacé par son bundle:*@
+    @Scripts.Render("~/bundles/bootstrap")
+
+   </body>
+
+
+    @*@Scripts.Render("~/bundles/jquery") ne pas mettre ici aussi car déjà incrusté -> ~on ne peut incruster deux fois la même librairie *@ 
+   
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+
+
+
+
+
+
+
+
+
+
+    @*<script src="js/jquery-2.2.3.min.js"></script>
+    <!-- start-smooth-scrolling -->
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+            	containerID: 'toTop', // fading element id
+            	containerHoverID: 'toTopHover', // fading element hover id
+            	scrollSpeed: 1200,
+            	easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="js/SmoothScroll.min.js"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+<!-- //</body>-->*@
+
+
+
+
+
+
+
+
+
+    

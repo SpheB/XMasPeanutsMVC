@@ -1,0 +1,28 @@
+﻿@model XmasPeanuts.Web.Models.GuestDisplay
+
+@{
+    ViewBag.Title = "ListeGift";
+}
+
+<h2 style="margin: 100px; font-size: 2em;">ListeGift de @Model.FirstName</h2>
+<div style="margin-left: 125px; margin-right: 125px;">
+    <ul style="margin: 25px; font-size: 2em;">
+
+        @foreach (XmasPeanuts.Web.Models.GifDisplay item in Model.List_g) //Model est le nom par défaut de ce qui est passé en vue. Il correspond ici à un object Model_general et on peut naviguer dedans comme tel
+        {
+            <li>
+                <div>
+                    @item.Title
+                </div>
+                <div>
+                    <img src="~/@item.Picture" alt="@item.Title">
+                </div>
+            </li>
+
+        }
+
+        </ul>
+        </div>
+
+
+
