@@ -1,0 +1,7 @@
+C:\Users\s.bonnet\documents\visual studio 2015\Projects\XmasPeanuts\XmasPeanuts.DAL\bin\Debug\XmasPeanuts.DAL.dll
+C:\Users\s.bonnet\documents\visual studio 2015\Projects\XmasPeanuts\XmasPeanuts.DAL\bin\Debug\XmasPeanuts.DAL.pdb
+C:\Users\s.bonnet\documents\visual studio 2015\Projects\XmasPeanuts\XmasPeanuts.DAL\bin\Debug\XmasPeanuts.Models.dll
+C:\Users\s.bonnet\documents\visual studio 2015\Projects\XmasPeanuts\XmasPeanuts.DAL\bin\Debug\XmasPeanuts.Models.pdb
+C:\Users\s.bonnet\documents\visual studio 2015\Projects\XmasPeanuts\XmasPeanuts.DAL\obj\Debug\XmasPeanuts.DAL.csprojResolveAssemblyReference.cache
+C:\Users\s.bonnet\documents\visual studio 2015\Projects\XmasPeanuts\XmasPeanuts.DAL\obj\Debug\XmasPeanuts.DAL.dll
+C:\Users\s.bonnet\documents\visual studio 2015\Projects\XmasPeanuts\XmasPeanuts.DAL\obj\Debug\XmasPeanuts.DAL.pdb
